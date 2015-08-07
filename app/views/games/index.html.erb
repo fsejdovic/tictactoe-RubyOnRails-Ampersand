@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Game List</div>
+  <table class="table table-responsive table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Players</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody role="games-list">
+      <% @games.each do |game| %>
+        <tr>
+          <td><%= link_to "#{game.player_1} vs #{game.player_2}", game_path(game) %></td>
+          <td>
+            <% if game.won? %>
+              <%= game.switch_user %> Won!
+            <% elsif game.finished? %>
+              Draw
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

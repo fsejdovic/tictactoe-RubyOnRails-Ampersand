@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Game <%= @game.id %></div>
+  <div class="panel-body">
+    <div class="col-lg-6">
+      <dl class="dl-horizontal" >
+        <% if @game.won? %>
+          <h4>
+            <span class="label label-default">
+              Game Over - Player <%= (@game.first_player_active? ? @game.player_2 : @game.player_1) %> Won!
+            </span>
+          </h4>
+        <% elsif @game.finished? %>
+          <h4><span class="label label-default">Game Draw</span></h4>
+        <% end %>
+        <dt>Player  <i class="fa fa-circle-o"></i>: </dt>     <dd><%= @game.player_1 %></dd>
+        <dt>Player  <i class="fa fa-remove"></i>:   </dt>     <dd><%= @game.player_2 %></dd>
+        <% unless @game.won? %>
+          <dt>Current Player:</dt> <dd><%= @game.current_player %></dd>
+        <% end %>
+      </dl>
+    </div>
+
+    <div class="col-lg-2">
+      <table class="table table-bordered">
+        <tr>
+      <% @game.board.each_with_index do |field, index| %>
+        <% if index % 3 == 0 %>
+          </tr><tr>
+        <% end %>
+
+        <% if field == "O" || field == "X" %>
+          <td>
+            <%= button_tag raw(field == "O" ? '&nbsp;<i class="fa fa-circle-o"></i>' : '&nbsp;<i class="fa fa-close"></i>' ), :disabled => true %>
+          </td>
+        <% elsif @game.finished? || @game.won? %>
+          <td><%= button_tag raw('&nbsp;&nbsp;&nbsp;&nbsp;'), :disabled => true %></td>
+        <% else %>
+          <%= form_for @game do |f| %>
+          <td>
+            <%= hidden_field_tag "index", index %>
+            <%= f.submit raw("&nbsp; #{field} &nbsp;") %>
+          </td>
+          <% end %>
+        <% end %>
+      <% end %>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

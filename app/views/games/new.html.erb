@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-heading">New Game</div>
+  <%= form_for(@game, :html => { :class => "form-horizontal" }) do |f| %>
+    <div class="panel-body col-lg-6">
+      <div class="form-group <%= has_error(@game.errors, :player_1) %>">
+        <label class="col-xs-2 control-label">Player O</label>
+        <div class="col-xs-10">
+          <%= f.text_field :player_1, class: "form-control", placeholder: "Player O", required: :required %>
+          <%= print_error(@game.errors, :player_1) %>
+        </div>
+      </div>
+      
+      <div class="form-group <%= has_error(@game.errors, :player_2) %>">
+        <label class="col-xs-2 control-label">Player X</label>
+        <div class="col-xs-10">
+          <%= f.text_field :player_2, class: "form-control", placeholder: "Player X", required: :required %>
+          <%= print_error(@game.errors, :player_2) %>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer clearfix">
+      <div class="pull-right">
+        <button class="btn btn-primary" type="submit">
+          <%= t('Create Game') %>
+        </button>
+      </div>
+    </div>
+  <% end %>
+</div>

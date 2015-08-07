@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>templates.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link href="../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../README_md.html">README</a>
+  
+    <li><a href="../../../README_rdoc.html">README</a>
+  
+    <li><a href="../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../app/assets/javascripts/app_js.html">app.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/bootstrap_js.html">bootstrap.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/helpers/metrics_js.html">metrics.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/models/game_js.html">game.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/models/home_data_js.html">home_data.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/pages/base_js.html">base.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/pages/game-view_js.html">game-view.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/pages/home-view_js.html">home-view.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/pages/new-game-view_js.html">new-game-view.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/router_js.html">router.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/templates_js.html">templates.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/game_show_js.html">game_show.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/home_index_js.html">home_index.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/views/main_js.html">main.js</a>
+  
+    <li><a href="../../../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/bootstrap-theme_css.html">bootstrap-theme.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/bootstrap_css.html">bootstrap.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../../log/development_log.html">development.log</a>
+  
+    <li><a href="../../../package_json.html">package.json</a>
+  
+    <li><a href="../../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../../public/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../../public/robots_txt.html">robots</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/assets/javascripts/templates.js">
+
+<p>(function (root, factory) {</p>
+
+<pre>if (typeof define === &#39;function&#39; &amp;&amp; define.amd) {
+    define([], factory);
+} else if (typeof exports === &#39;object&#39;) {
+    module.exports = factory();
+} else {
+    root.templatizer = factory();
+}</pre>
+
+<p>}(this, function () {</p>
+
+<pre>var jade=function(){function r(r){return null!=r&amp;&amp;&quot;&quot;!==r}function n(e){return Array.isArray(e)?e.map(n).filter(r).join(&quot; &quot;):e}var e={};return e.merge=function t(n,e){if(1===arguments.length){for(var a=n[0],s=1;s&lt;n.length;s++)a=t(a,n[s]);return a}var i=n[&quot;class&quot;],l=e[&quot;class&quot;];(i||l)&amp;&amp;(i=i||[],l=l||[],Array.isArray(i)||(i=[i]),Array.isArray(l)||(l=[l]),n[&quot;class&quot;]=i.concat(l).filter(r));for(var o in e)&quot;class&quot;!=o&amp;&amp;(n[o]=e[o]);return n},e.joinClasses=n,e.cls=function(r,t){for(var a=[],s=0;s&lt;r.length;s++)a.push(t&amp;&amp;t[s]?e.escape(n([r[s]])):n(r[s]));var i=n(a);return i.length?&#39; class=&quot;&#39;+i+&#39;&quot;&#39;:&quot;&quot;},e.attr=function(r,n,t,a){return&quot;boolean&quot;==typeof n||null==n?n?&quot; &quot;+(a?r:r+&#39;=&quot;&#39;+r+&#39;&quot;&#39;):&quot;&quot;:0==r.indexOf(&quot;data&quot;)&amp;&amp;&quot;string&quot;!=typeof n?&quot; &quot;+r+&quot;=&#39;&quot;+JSON.stringify(n).replace(/&#39;/g,&quot;&amp;apos;&quot;)+&quot;&#39;&quot;:t?&quot; &quot;+r+&#39;=&quot;&#39;+e.escape(n)+&#39;&quot;&#39;:&quot; &quot;+r+&#39;=&quot;&#39;+n+&#39;&quot;&#39;},e.attrs=function(r,t){var a=[],s=Object.keys(r);if(s.length)for(var i=0;i&lt;s.length;++i){var l=s[i],o=r[l];&quot;class&quot;==l?(o=n(o))&amp;&amp;a.push(&quot; &quot;+l+&#39;=&quot;&#39;+o+&#39;&quot;&#39;):a.push(e.attr(l,o,!1,t))}return a.join(&quot;&quot;)},e.escape=function(r){var n=String(r).replace(/&amp;/g,&quot;&amp;amp;&quot;).replace(/&lt;/g,&quot;&amp;lt;&quot;).replace(/&gt;/g,&quot;&amp;gt;&quot;).replace(/&quot;/g,&quot;&amp;quot;&quot;);return n===&quot;&quot;+r?r:n},e.rethrow=function a(r,n,e,t){if(!(r instanceof Error))throw r;if(!(&quot;undefined&quot;==typeof window&amp;&amp;n||t))throw r.message+=&quot; on line &quot;+e,r;try{t=t||require(&quot;fs&quot;).readFileSync(n,&quot;utf8&quot;)}catch(s){a(r,null,e)}var i=3,l=t.split(&quot;\n&quot;),o=Math.max(e-i,0),c=Math.min(l.length,e+i),i=l.slice(o,c).map(function(r,n){var t=n+o+1;return(t==e?&quot;  &gt; &quot;:&quot;    &quot;)+t+&quot;| &quot;+r}).join(&quot;\n&quot;);throw r.path=n,r.message=(n||&quot;Jade&quot;)+&quot;:&quot;+e+&quot;\n&quot;+i+&quot;\n\n&quot;+r.message,r},e}();
+
+var templatizer = {};
+templatizer[&quot;includes&quot;] = {};
+templatizer[&quot;pages&quot;] = {};
+
+// body.jade compiled template
+templatizer[&quot;body&quot;] = function tmpl_body() {
+    return &#39;&lt;body&gt;&lt;div id=&quot;wrapper&quot;&gt;&lt;nav class=&quot;navbar navbar-default navbar-static-top&quot;&gt;&lt;div class=&quot;container-fluid&quot;&gt;&lt;div class=&quot;navbar-header&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Tic Tac Toe Game&lt;/a&gt;&lt;/div&gt;&lt;div id=&quot;navbar&quot; class=&quot;navbar-collapse collapse&quot;&gt;&lt;ul class=&quot;nav navbar-nav&quot;&gt;&lt;li&gt;&lt;a href=&quot;/games&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/games/new&quot;&gt;&lt;i class=&quot;fa fa-gamepad&quot;&gt;&lt;/i&gt; New Game&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container-fluid&quot;&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-lg-12&quot; role=&quot;page-container&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer class=&quot;text-center&quot;&gt;&amp;copy; 2015&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&#39;;
+};
+
+// head.jade compiled template
+templatizer[&quot;head&quot;] = function tmpl_head() {
+    return &#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0&quot;/&gt;&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;/&gt;&#39;;
+};
+
+// includes/betfair_root.jade compiled template
+templatizer[&quot;includes&quot;][&quot;games&quot;] = function tmpl_includes_games() {
+    return &#39;&lt;tr&gt;&lt;td&gt;&lt;a role=&quot;gameName&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td role=&quot;gameResult&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&#39;;
+};
+
+// includes/betfair_root.jade compiled template
+templatizer[&quot;includes&quot;][&quot;gameShow&quot;] = function tmpl_includes_game_show() {
+    return &#39;&lt;dt&gt;Player 1 &lt;i class=&quot;fa fa-circle-o&quot;&gt;&lt;/i&gt;: &lt;/dt&gt; &lt;dd role=&quot;player_1&quot;&gt;&lt;/dd&gt;&lt;dt&gt;Player 2 &lt;i class=&quot;fa fa-remove-o&quot;&gt;&lt;/i&gt;: &lt;/dt&gt; &lt;dd role=&quot;player_2&quot;&gt;&lt;/dd&gt;&lt;dt&gt;Player 2 &lt;i class=&quot;fa fa-remove&quot;&gt;&lt;/i&gt;: &lt;/dt&gt; &lt;dd&gt;&lt;%= @game.player_2 %&gt;&lt;/dd&gt;&lt;dt&gt;Current Player: &lt;/dt&gt; &lt;dd role=&quot;currnet_player&quot;&gt;&lt;/dd&gt;&#39;;
+};
+
+// pages/collectionDemo.jade compiled template
+templatizer[&quot;pages&quot;][&quot;homeView&quot;] = function tmpl_pages_homeView() {
+    return &#39;&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-heading&quot;&gt;Game List&lt;/div&gt;&lt;table class=&quot;table table-responsive table-striped table-hover&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Players&lt;/th&gt;&lt;th&gt;Result&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody role=&quot;games-list&quot;&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&#39;;
+};
+
+templatizer[&quot;pages&quot;][&quot;gameView&quot;] = function tmpl_pages_gameView(){
+    return &#39;&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-heading&quot;&gt;Game {{id}}&lt;/div&gt;&lt;div class=&quot;panel-body&quot;&gt;&lt;div class=&quot;col-lg-6&quot;&gt;&lt;h4&gt;&lt;span class=&quot;label label-default&quot; role=&quot;gameHeading&quot;&gt;&lt;/span&gt;&lt;/h4&gt;&lt;dl class=&quot;dl-horizontal&quot; role=&quot;gameDetail&quot;&gt;&lt;/dl&gt;&lt;/div&gt;&lt;div class=&quot;col-lg-6&quot; role=&quot;crateBoard&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&#39;;
+}
+
+// pages/BetfairRootView.jade compiled template
+templatizer[&quot;pages&quot;][&quot;newGameView&quot;] = function tmpl_pages_newGameView() {
+    return &#39;&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-heading&quot;&gt;New Game&lt;/div&gt;&lt;/div&gt;&#39;;
+};
+
+return templatizer;</pre>
+
+<p>}));</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
