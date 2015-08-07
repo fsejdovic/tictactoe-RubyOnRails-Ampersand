@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
-gem "browserify-rails" #, "~> 0.3"#
+# "browserify-rails" #, "~> 0.3"#
 #gem 'ejs' this gem is not required
  
 # Use ActiveModel has_secure_password
